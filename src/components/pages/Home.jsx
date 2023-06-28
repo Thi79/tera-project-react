@@ -33,7 +33,7 @@ export default function Home() {
         }}
         className="home__select-users"
       >
-        <option value=""></option>
+        <option value="">Selecione um usuário</option>
         {users
           .sort((a, b) => a.fn.localeCompare(b.fn))
           .map((user) => (
