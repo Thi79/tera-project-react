@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import Loading from "../atoms/Loading";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
+import styles from "./Home.module.css";
 
 export default function Home() {
   const navigate = useNavigate("");
@@ -23,15 +24,15 @@ export default function Home() {
   return isLoading ? (
     <Loading />
   ) : (
-    <div className="home center">
-      <div className="home__logo">
+    <div className={`${styles.home} center`}>
+      <div className={styles.logo}>
         <img src={logo} className="responsive" alt="" />
       </div>
       <select
         onChange={(event) => {
           setCurrenteUser(event.target.value);
         }}
-        className="home__select-users"
+        className={styles.selectUsers}
       >
         <option value="">Selecione um usuário</option>
         {users
