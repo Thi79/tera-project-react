@@ -11,7 +11,7 @@ export default function AppHeader(props) {
           <img src={logo} className="responsive" alt="" />
         </Link>
       </div>
-      <div className="menu">
+      <div className={styles.menu}>
         <i onClick={() => props.setOpen(true)} className="fa fa-bars"></i>
       </div>
     </div>
